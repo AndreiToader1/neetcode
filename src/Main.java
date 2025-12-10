@@ -1,14 +1,19 @@
-import TwoSum.Solution;
+import GroupAnagrams.Solution;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
         var solution = new Solution();
-        var nums = new int[] {5,5};
-        var target = 10;
+        var strs = new String[] {"bdddddddddd","bbbbbbbbbbc"};
+        var result = solution.groupAnagrams(strs);
+        for (var list: result) {
+            for (var item: list) {
+                System.out.print(item+ " ");
+            }
 
-        var result = solution.twoSum(nums, target);
-        for (var number: result) {
-            System.out.println(number);
+            System.out.println("\n");
         }
     }
 }

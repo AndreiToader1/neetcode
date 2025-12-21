@@ -1,14 +1,10 @@
-import productexceptself.Solution;
+import validpalindrome.Solution;
 
 public class Main {
     public static void main(String[] args) {
         var solution = new Solution();
-        var nums = new int[] {-1,0,1,2,3};
-        var k = 1;
-
-        var result = solution.productExceptSelf(nums);
-        for (int j : result) {
-            System.out.println(j);
-        }
+        var input = "tab a cat";
+        var result = solution.isPalindrome(input);
+        System.out.println(result);
     }
 }

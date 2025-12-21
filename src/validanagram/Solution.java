@@ -1,4 +1,4 @@
-package ValidAnagram;
+package validanagram;
 
 import java.util.HashMap;
 import java.util.Objects;

@@ -1,7 +1,6 @@
-package ContainsDuplicates;
+package containsduplicates;
 
 import java.util.Dictionary;
-import java.util.HashMap;
 import java.util.Hashtable;
 
 public class Solution {

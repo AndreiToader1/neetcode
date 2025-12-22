@@ -4,13 +4,13 @@ public class Solution {
     private static final int NOT_FOUND_INDEX = -1;
     public int search(int[] nums, int target) {
         int targetIndex = NOT_FOUND_INDEX;
-        int leftIndex = 1;
-        int rightIndex = nums.length;
+        int leftIndex = 0;
+        int rightIndex = nums.length-1;
         while (leftIndex <= rightIndex) {
             int middleIndex = (leftIndex + rightIndex) /2;
-            int middleNumber = nums[middleIndex-1];
+            int middleNumber = nums[middleIndex];
             if (middleNumber == target) {
-                targetIndex = middleIndex-1;
+                targetIndex = middleIndex;
                 break;
             }
             else if (middleNumber > target) {

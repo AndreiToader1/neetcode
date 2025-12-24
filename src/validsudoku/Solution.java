@@ -2,6 +2,7 @@ package validsudoku;
 
 public class Solution {
     private static final int BOARD_SIZE = 9;
+    private static final int SUB_BOX_SIZE = 3;
     private final short[][] lineFrequency;
     private final short[][] columnsFrequency;
     private final short[][] subBoxesFrequency;
@@ -22,7 +23,7 @@ public class Solution {
                 lineFrequency[line][cellValue-1]++;
                 columnsFrequency[column][cellValue-1]++;
 
-                int subBoxFrequencyIndex = line/3 * 3  + column / 3 ;
+                int subBoxFrequencyIndex = line/ SUB_BOX_SIZE * SUB_BOX_SIZE  + column / SUB_BOX_SIZE ;
                 subBoxesFrequency[subBoxFrequencyIndex][cellValue-1]++;
             }
         }

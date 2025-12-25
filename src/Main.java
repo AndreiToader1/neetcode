@@ -1,11 +1,11 @@
-import containerwithmostwater.Solution;
+import reversepolishnotation.Solution;
 
 
 public class Main {
     public static void main(String[] args) {
-        var heights = new int[] {2,2,2};
+       var tokens = new String[] {"1","2","+","3","*","4","-"};
         var solution = new Solution();
-        var result = solution.maxArea(heights);
+        var result = solution.evalRPN(tokens);
         System.out.print(result);
     }
 }

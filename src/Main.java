@@ -1,11 +1,12 @@
-import reversepolishnotation.Solution;
+import subsets.Solution;
 
 
 public class Main {
     public static void main(String[] args) {
-       var tokens = new String[] {"1","2","+","3","*","4","-"};
+        var nums = new int[] {7};
+
         var solution = new Solution();
-        var result = solution.evalRPN(tokens);
-        System.out.print(result);
+        var result = solution.subsets(nums);
+        System.out.print(result.toString());
     }
 }

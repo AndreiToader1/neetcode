@@ -1,5 +1,5 @@
 import reverselinkedlist.Solution;
-import utils.ListNodeUtils;
+import utils.linkedlist.ListNodeUtils;
 
 
 public class Main {

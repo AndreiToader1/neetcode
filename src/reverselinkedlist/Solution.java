@@ -1,6 +1,6 @@
 package reverselinkedlist;
 
-import utils.ListNode;
+import utils.linkedlist.ListNode;
 
 public class Solution {
     public ListNode reverseList(ListNode head) {

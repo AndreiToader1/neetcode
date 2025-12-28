@@ -1,12 +1,13 @@
-import combinationsum.Solution;
+import reverselinkedlist.Solution;
+import utils.ListNodeUtils;
 
 
 public class Main {
     public static void main(String[] args) {
-        var nums = new int[] {3};
-
+        var head = ListNodeUtils.createSingleLinkedList(new int[] {0,1,2,3});
         var solution = new Solution();
-        var result = solution.combinationSum(nums, 5);
-        System.out.print(result.toString());
+        var resultHeadNode = solution.reverseList(head);
+        var resultAsList = ListNodeUtils.getSingleLinkedListValues(resultHeadNode);
+        System.out.print(resultAsList);
     }
 }

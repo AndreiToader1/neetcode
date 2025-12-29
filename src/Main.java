@@ -1,4 +1,4 @@
-import invertbinarytree.Solution;
+import maximumdepthbinarytree.Solution;
 import utils.binarytrees.BinaryTreesUtils;
 import utils.binarytrees.TreeNode;
 
@@ -8,10 +8,7 @@ public class Main {
         var solution = new Solution();
         var values = new int[] {3,2,1};
         var rootNode = BinaryTreesUtils.constructBinaryTree(values);
-        TreeNode invertedTree = solution.invertTree(rootNode);
-
-        var decodedValues = BinaryTreesUtils.getBinaryTreeValues(invertedTree);
-
-        System.out.println(decodedValues);
+        int maxDepth = solution.maxDepth(rootNode);
+        System.out.println(maxDepth);
     }
 }

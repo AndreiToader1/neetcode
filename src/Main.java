@@ -1,13 +1,17 @@
-import reverselinkedlist.Solution;
-import utils.linkedlist.ListNodeUtils;
+import invertbinarytree.Solution;
+import utils.binarytrees.BinaryTreesUtils;
+import utils.binarytrees.TreeNode;
 
 
 public class Main {
     public static void main(String[] args) {
-        var head = ListNodeUtils.createSingleLinkedList(new int[] {0,1,2,3});
         var solution = new Solution();
-        var resultHeadNode = solution.reverseList(head);
-        var resultAsList = ListNodeUtils.getSingleLinkedListValues(resultHeadNode);
-        System.out.print(resultAsList);
+        var values = new int[] {3,2,1};
+        var rootNode = BinaryTreesUtils.constructBinaryTree(values);
+        TreeNode invertedTree = solution.invertTree(rootNode);
+
+        var decodedValues = BinaryTreesUtils.getBinaryTreeValues(invertedTree);
+
+        System.out.println(decodedValues);
     }
 }

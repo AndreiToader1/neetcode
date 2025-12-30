@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Queue;
 
 public class BinaryTreesUtils {
-    public static TreeNode constructBinaryTree(int[] values) {
+    public static TreeNode constructBinaryTree(Integer[] values) {
         var root = new TreeNode(values[0]);
         int valueIndex = 1;
         Queue<TreeNode> nodes = new LinkedList<>();
@@ -14,15 +14,19 @@ public class BinaryTreesUtils {
 
         while (valueIndex < values.length) {
             TreeNode currentNode = nodes.poll();
-            TreeNode leftNode = new TreeNode(values[valueIndex]);
+            TreeNode leftNode = values[valueIndex] == null ? null : new TreeNode(values[valueIndex]);
             currentNode.left = leftNode;
-            nodes.offer(leftNode);
+            if (leftNode != null) {
+                nodes.offer(leftNode);
+            }
 
             valueIndex++;
             if (valueIndex < values.length) {
-                TreeNode rightNode = new TreeNode(values[valueIndex]);
+                TreeNode rightNode = values[valueIndex] == null ? null : new TreeNode(values[valueIndex]);
                 currentNode.right = rightNode;
-                nodes.offer(rightNode);
+                if (rightNode != null) {
+                    nodes.offer(rightNode);
+                }
                 valueIndex++;
             }
 

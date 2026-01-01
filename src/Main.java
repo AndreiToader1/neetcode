@@ -1,16 +1,17 @@
-import trees.samebinarysearchtree.Solution;
-import utils.binarytrees.BinaryTreesUtils;
+import linkedlist.mergetwosortedlists.Solution;
+import utils.linkedlist.ListNodeUtils;
 
 
 public class Main {
     public static void main(String[] args) {
         var solution = new Solution();
-        var firstTreeValues = new Integer[]{1,2,3};
-        var secondTreeValues = new Integer[] {1,3,2};
+        var firstListValues = new int[]{};
+        var secondListValues = new int[] {1,3,5};
 
-        var firstTreeRoot = BinaryTreesUtils.constructBinaryTree(firstTreeValues);
-        var secondTreeRoot = BinaryTreesUtils.constructBinaryTree(secondTreeValues);
-        boolean isSameTree = solution.isSameTree(firstTreeRoot, secondTreeRoot);
-        System.out.println(isSameTree);
+        var firstListHead = ListNodeUtils.createSingleLinkedList(firstListValues);
+        var secondListHead = ListNodeUtils.createSingleLinkedList(secondListValues);
+        var sortedListHead = solution.mergeTwoLists(firstListHead, secondListHead);
+        var sortedList = ListNodeUtils.getSingleLinkedListValues(sortedListHead);
+        System.out.println(sortedList);
     }
 }

@@ -25,4 +25,23 @@ public  class ListNodeUtils {
 
         return head;
     }
+
+    public static ListNode createSingleLinkedListWithCycle(int[] nums, int cycleIndex) {
+        ListNode head = new ListNode(nums[0]);
+        ListNode[] nodes = new ListNode[nums.length];
+        ListNode currentNode = head;
+        nodes[0] = head;
+        for (int index = 1; index < nums.length; index++) {
+            ListNode node = new ListNode(nums[index]);
+            nodes[index] = node;
+            currentNode.next = node;
+            currentNode = node;
+        }
+
+        if (cycleIndex != -1) {
+            currentNode.next = nodes[cycleIndex];
+        }
+
+        return head;
+    }
 }

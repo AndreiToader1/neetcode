@@ -1,4 +1,4 @@
-import samebinarysearchtree.Solution;
+import trees.samebinarysearchtree.Solution;
 import utils.binarytrees.BinaryTreesUtils;
 
 
